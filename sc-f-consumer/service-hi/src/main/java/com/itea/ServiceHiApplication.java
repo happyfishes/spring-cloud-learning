@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @EnableEurekaClient
@@ -20,8 +21,8 @@ public class ServiceHiApplication {
     @Value("${server.port}")
     String port;
 
-    @RequestMapping("/hi/{msg}")
-    public String hi(@PathVariable("msg") String msg){
+    @RequestMapping("/hi")
+    public String hi(@RequestParam("msg") String msg){
         return "I am " + msg + ", My port " + port;
     }
 

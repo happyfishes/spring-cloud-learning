@@ -2,7 +2,7 @@ server:
   port: 8763
 spring:
   application:
-    name: eureka-client
+    name: service-hi
 
 eureka:
   client:
