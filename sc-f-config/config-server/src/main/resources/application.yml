@@ -1,0 +1,24 @@
+server:
+  port: 8800
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/happyfishes/spring-cloud-learning
+          username: ghbstart@163.com
+          password: 5253mmbb
+          default-label: master
+          search-paths: sc-config-server-profile
+#      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    appname: config-server
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
