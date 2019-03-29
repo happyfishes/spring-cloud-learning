@@ -1,0 +1,8 @@
+依次开启eureka-server、service-hi、service-lucy、service-turbine工程
+打开浏览器输入：http://localhost:8900/turbine.stream
+
+http://localhost:8766/hi?name=forezp
+
+http://localhost:8700/hello
+
+打开:http://localhost:8700/hystrix, 输入监控流 http://localhost:8900/turbine.stream
